@@ -1,7 +1,7 @@
 # TextOnPath
 WPF control that displays text along a given path
 
-![intro](/Readme.PNG)
+![intro](/Readme.png)
 
 # Features
 * define the path in several different ways like PathGeometry, Geometry, PathFigure, Line, Rectangle, Ellipse
