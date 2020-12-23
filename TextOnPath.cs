@@ -1,4 +1,34 @@
-﻿using System;
+﻿// MIT License
+// 
+// Copyright (c) 2020 Michael Göricke
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+//
+// This control is based on Charles Petzold's work, ideas and code. This control
+// combines warped and unwarped text into one single control and adds some more
+// features:
+// - define the path in some more ways than just a PathFigure
+// - show text warped or unwarped
+// - stretch the text along the full path (=> automatic font size) or use the 
+//   given FontSize (text might be shorter or longer than the path)
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
@@ -85,8 +115,8 @@ namespace Control.TextOnPath
 
         public string Text
         {
-            set => SetValue(TextProperty, value);
             get => (string)GetValue(TextProperty);
+            set => SetValue(TextProperty, value);
         }
 
         static void OnTextPropertyChanged(DependencyObject obj, DependencyPropertyChangedEventArgs args)
