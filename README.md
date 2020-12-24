@@ -102,14 +102,14 @@ or directy assign the path (again any type of Geometry or PathFigure will work) 
 Type | Name | Description
 ------------ | ------------- | ------------
 FontFamily | FontFamily | Gets or sets the preferred top-level font family for the content of the element.
-double | FontSize | Gets or sets the font size for the content of the element.
+double | FontSize | Gets or sets the font size for the content of the element. In case `Stretch` is set to true `FontSize` is ignored.
 FontStyle | FontStyle | Gets or sets the font style for the content of the element.
 FontWeight | FontWeight | Gets or sets the top-level font weight for the content of the element.
 FontStretch | FontStretch | Gets or sets the font-stretching characteristics for the content of the element.
 string | Text | Gets or sets the text contents of a `TextOnPath`
 object | Path | Gets or sets the path. The type is either a `PathFigure` or any derived class from `Geometry`. The first figure of a geometry is taken.
 bool | Warp | Gets or sets a value that indicates whether to display the text warped.
-bool | Stretch | Gets or sets a value that indicates the text is stretched along the full length of the path.
+bool | Stretch | Gets or sets a value that indicates the text is stretched along the full length of the path. If it is set to true `FontSize` is ignored and the font size is set automatically to fit the path length.
 Brush | Fill | Gets or sets the Brush that specifies how the shape's interior is painted.
 Brush | Stroke | Gets or sets the Brush that specifies how the Shape outline is painted.
 double | StrokeThickness | Gets or sets the width of the Shape outline.
