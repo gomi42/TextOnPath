@@ -63,7 +63,7 @@ Define paths in your resources...
         </textonpath:TextOnPath>
 ```
 
-or directy assign the path (again any type of Geometry or PathFigure will work) to the Path property of the TextOnPath control 
+or directly assign the path (again any type of Geometry or PathFigure will work) to the Path property of the TextOnPath control 
 ```xaml
         <textonpath:TextOnPath Margin="445,250,0,0"
                                HorizontalAlignment="Left"
